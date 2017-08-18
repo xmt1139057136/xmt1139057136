@@ -324,9 +324,9 @@
       
         
           
-            <h2 id="Github-Pages-�Զ�������"><a href="#Github-Pages-�Զ�������" class="headerlink" title="Github Pages �Զ�������"></a>Github Pages �Զ�������</h2><hr>
-<p>  12����������ʱ��8��Ǯ������5�ꡣ�����������ڱ����ˡ���Ҫ35Ԫ/�꣬ /(��o��)/~~<br>  ���ڣ�35�鶼�ӹ�������������˿������<br>  O(��_��)O �ðɣ����󲻹���</p>
-<p>  �����и�github pages. ��������֧�� hexo �� jeckly������ƴ��.��д���Լ���build.js��û�����ǡ�<br>  ����������������<code>blog.yanggaofei.cn</code>ָ����<code>bryanyang.github.io</code>���������£�<br>  |————————————<br>  ��¼����|������¼|������·|��¼ֵ|MX���ȼ�| TTL<br>  CNAME|blog|Ĭ��|bryanyang.github.io|–|10����<br>  ————————————|<br>  ��������<code>http://blog.yanggaofei.cn</code>���ִ�����404:<br>  <img src="https://segmentfault.com/img/bVq6HR" alt="404"><br>  ȥ���������£����ĵ���ϸ��������������<strong>custom domain</strong><br>  <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/" target="_blank" rel="external">Setting up a custom domain</a></p>
+            <h2 id="Github-Pages-自定义域名"><a href="#Github-Pages-自定义域名" class="headerlink" title="Github Pages 自定义域名"></a>Github Pages 自定义域名</h2><hr>
+<p>  12年买域名的时候8块钱。买了5年。现在域名到期变贵了。。要35元/年， /(ㄒoㄒ)/~~<br>  观众：35块都嫌贵，你这个臭屌丝。。。<br>  O(∩_∩)O 好吧，不贵不贵。</p>
+<p>  现在有个github pages. 官网可以支持 hexo 和 jeckly（不会拼）.我写了自己的build.js。没用它们。<br>  今天在万网把域名<code>blog.yanggaofei.cn</code>指向了<code>bryanyang.github.io</code>，配置如下：<br>  |————————————<br>  记录类型|主机记录|解析线路|记录值|MX优先级| TTL<br>  CNAME|blog|默认|bryanyang.github.io|–|10分钟<br>  ————————————|<br>  结果访问<code>http://blog.yanggaofei.cn</code>出现大大的404:<br>  <img src="https://segmentfault.com/img/bVq6HR" alt="404"><br>  去官网看了下，有文档详细描述该如何配置<strong>custom domain</strong><br>  <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/" target="_blank" rel="external">Setting up a custom domain</a></p>
 <blockquote>
 <pre><code>1.Pick your custom domain and register it with a DNS provider. A DNS provider is a company that allows users to buy and register a unique domain name and connect that name to an IP (Internet Protocol) address by pointing your domain name to an IP address or a different domain name. A DNS provider is also called a domain registrar or DNS host.
 </code></pre></blockquote>
@@ -338,32 +338,32 @@
 * Setting up a www subdomain such as www.example.com
 * Setting up an apex domain and www subdomain such as example.com and www.example.com
 * Setting up a custom subdomain such as blog.example.com
-</code></pre><h3 id="�ڶ�������Ҫ��repository��������CNAME�l���Adding-your-custom-domain-to-a-CNAME-file"><a href="#�ڶ�������Ҫ��repository��������CNAME�l���Adding-your-custom-domain-to-a-CNAME-file" class="headerlink" title="�ڶ�������Ҫ��repository��������CNAME�ļ���Adding your custom domain to a CNAME file"></a>�ڶ�������Ҫ��repository��������<code>CNAME</code>�ļ���<a href="https://help.github.com/articles/setting-up-your-pages-site-repository/" target="_blank" rel="external">Adding your custom domain to a CNAME file</a></h3><blockquote>
-<pre><code>1.ȥ���Լ��� Pages site repository.
+</code></pre><h3 id="第二步，需要在repository下面增加CNAME文件：Adding-your-custom-domain-to-a-CNAME-file"><a href="#第二步，需要在repository下面增加CNAME文件：Adding-your-custom-domain-to-a-CNAME-file" class="headerlink" title="第二步，需要在repository下面增加CNAME文件：Adding your custom domain to a CNAME file"></a>第二步，需要在repository下面增加<code>CNAME</code>文件：<a href="https://help.github.com/articles/setting-up-your-pages-site-repository/" target="_blank" rel="external">Adding your custom domain to a CNAME file</a></h3><blockquote>
+<pre><code>1.去到自己的 Pages site repository.
 </code></pre></blockquote>
-<pre><code>2.��&quot;Branches&quot; �˵�, �л������� repository&apos;s Pages ��֧:
+<pre><code>2.在&quot;Branches&quot; 菜单, 切换到你的 repository&apos;s Pages 分支:
 
 * For User and Organization Pages sites, the Pages branch is master.
 * For Project Pages sites, the Pages branch is gh-pages.
 
-3.���ļ��б���, ���� **New file**.
+3.在文件列表中, 点击 **New file**.
 ![The New file buttonAbove the file list, click New file](https://help.github.com/assets/images/help/repository/create_new_file.png)
 
-4.�ļ���, ��д *CNAME* (ȫ����д��).
+4.文件名, 填写 *CNAME* (全部大写！).
 
-5.���ļ�������, ����һ����ָ��������������Ҫ��д `https://` �� `http://`. ����, �� `www.example.com`, ������ `https://www.example.com`. ע��ֻ������һ�м�¼��
+5.在文件内容中, 添加一行来指定你的域名，不要填写 `https://` 或 `http://`. 例如, 用 `www.example.com`, 而不是 `https://www.example.com`. 注意只能添加一行纪录。
 
-6.��ҳ���ײ�������commit message�ϴ���
+6.在页面底部，填入commit message上传。
 ![img](https://help.github.com/assets/images/help/repository/write-commit-message-quick-pull.png)
 
-7.��ֱ�Ӵ���master���У��������Թ���Below the commit message fields, decide whether to add your commit to the current branch or to a new branch. If your current branch is master, you should choose to create a new branch for your commit and then create a pull request.
+7.（直接传到master就行，该条可略过）Below the commit message fields, decide whether to add your commit to the current branch or to a new branch. If your current branch is master, you should choose to create a new branch for your commit and then create a pull request.
 ![img](https://help.github.com/assets/images/help/repository/choose-commit-branch.png)
 
-8.(��)Click Propose new file.
+8.(略)Click Propose new file.
 ![img](https://help.github.com/assets/images/help/repository/new-file-commit-button.png)
-</code></pre><p>  OK������������ȷ�Ļ����Ϳ�����<strong>Setting</strong>�￴���µ�domain�ˡ�<br>  <img src="https://help.github.com/assets/images/help/repository/repo-actions-settings.png" alt="img"><br>  <img src="https://help.github.com/assets/images/help/settings/pages-section.png" alt="img"></p>
-<p>  һ���������ӣ�</p>
-<h2 id="a-CNAME-file"><a href="#a-CNAME-file" class="headerlink" title="  a CNAME file"></a>  <a href="https://github.com/muan/muan.github.com/blob/master/CNAME" target="_blank" rel="external">a CNAME file</a></h2><p>  ������������������ָ��û�ĵġ��ǵ�ȥDNS��������վȥ�ġ���ҳ���Ϸ��ҵ����á�</p>
+</code></pre><p>  OK。如果操作正确的话，就可以在<strong>Setting</strong>里看到新的domain了。<br>  <img src="https://help.github.com/assets/images/help/repository/repo-actions-settings.png" alt="img"><br>  <img src="https://help.github.com/assets/images/help/settings/pages-section.png" alt="img"></p>
+<p>  一个线上例子：</p>
+<h2 id="a-CNAME-file"><a href="#a-CNAME-file" class="headerlink" title="  a CNAME file"></a>  <a href="https://github.com/muan/muan.github.com/blob/master/CNAME" target="_blank" rel="external">a CNAME file</a></h2><p>  最后，如果你的域名指向没改的。记得去DNS服务商网站去改。见页面上方我的配置。</p>
 
           
         
